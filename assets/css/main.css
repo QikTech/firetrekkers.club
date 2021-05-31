@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
+	scroll-behavior: smooth;
 	line-height: 1;
 }
 
