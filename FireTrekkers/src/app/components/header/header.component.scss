@@ -1,0 +1,37 @@
+.header_wrapper{
+    display: grid;
+    place-items: center;
+    // padding-top: 22%;
+    // width: 100vw;
+}
+
+.header{
+    height: 100vh;
+    background-color: #4A3D3930;
+
+}
+.header-component{
+    
+    // background: radial-gradient(50% 50% at 50% 50%, #4A3D39 0%, #1D262E 100%);
+    background-color: #4A3D3930;
+    border-radius: 20px;
+    padding: 2%;
+    font-size: 6vw;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 3px;
+}
+
+.header_sub{
+    font-family: 'Merriweather', serif;
+    font-size: 1.6vw;
+    color: white;
+    margin-top: -5%;
+
+}
+
+// font-family: 'Merriweather', serif;
+// font-family: 'Source Sans Pro', sans-serif;
