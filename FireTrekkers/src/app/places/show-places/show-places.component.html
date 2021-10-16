@@ -1,1 +1,71 @@
-<p>show-places works!</p>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary float-right m-2" 
+data-toggle="modal" data-target="#exampleModal"
+(click)="addClick()"
+data-backfrop="static"
+data-keyboard="false"
+>
+    Add Place
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" 
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" 
+          (click)="closeClick()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <app-add-edit-places [modalPlace]="modalPlace" *ngIf="ActivateAddEditPlaceComp">
+              
+          </app-add-edit-places>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>PlaceId</th>
+            <th>PlaceDate</th>
+            <th>PlaceName</th>
+            <th>PlaceArea</th>
+            <th>PlaceElevation</th>
+            <th>PlaceDescription</th>
+            <th>PlaceCoverImage</th>
+            <th>PlaceImages</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of PlacesList">
+            <td>{{dataItem.PlaceId}}</td>
+            <td>{{dataItem.PlaceDate}}</td>
+            <td>{{dataItem.PlaceName}}</td>
+            <td>{{dataItem.PlaceArea}}</td>
+            <td>{{dataItem.PlaceElevation}}</td>
+            <td>{{dataItem.PlaceDescription}}</td>
+            <td>{{dataItem.PlaceCoverImage}}</td>
+            <td>{{dataItem.PlaceImages}}</td>
+            <td><button type="button" class="btn btn-light mr-1"
+                (click)="editClick(dataItem)"
+                data-backdrop="static"
+                data-toggle="modal" data-target="#exampleModal"
+                data-keyboard="false">
+                Edit
+            </button></td>
+            <td><button type="button" class="btn btn-light mr-1"
+                (click)="deleteClick(dataItem)"
+                data-backfrop="static"
+                data-keyboard="false">
+                Delete
+            </button></td>
+        </tr>
+    </tbody>
+</table>

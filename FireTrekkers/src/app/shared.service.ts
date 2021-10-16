@@ -25,12 +25,12 @@ export class SharedService {
 
   //PUT Update Place
   updatePlace(val:any){
-    return this.http.put(this.APIUrl+'/places',val);
+    return this.http.put(this.APIUrl+'/places', val);
   }
 
   //DELETE Delete Place
   deletePlace(val:any){
-    return this.http.delete(this.APIUrl+'/places/',val);
+    return this.http.delete(this.APIUrl+'/places/'+ val);
   }
 
   //Method to Save Cover Photo
