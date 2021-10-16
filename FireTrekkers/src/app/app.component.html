@@ -1,11 +1,34 @@
-<div class="body_wrapper">
+<!-- <div class="body_wrapper">
   <div class="header">
     <app-header></app-header>
   </div>
+
 
   <div class="page_wrapper">
     <app-page-component></app-page-component>
   </div>
 
+
+  <app-places *ngIf="router.url=='/'">  </app-places>
+
+<router-outlet ></router-outlet>
+
+<app-footer></app-footer>
 </div>
 
+
+*ngIf="router.url=='/places'" -->
+
+<div class="body_wrapper">
+    <app-header></app-header>
+
+    <app-page-component *ngIf="router.url=='/'"></app-page-component>
+
+    <router-outlet></router-outlet>
+
+    <app-footer></app-footer>
+</div>
+
+
+
+<!-- *ngIf="router.url=='/places'" -->
