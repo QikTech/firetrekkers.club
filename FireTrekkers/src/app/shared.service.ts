@@ -11,7 +11,7 @@ export class SharedService {
   readonly CoverPhotoUrl="http://localhost:25085/CoverPhotos";
 
   //Instiantating HTTP CLient in Constructor
-  constructor(private http:HttpClient) { } 
+  constructor(private http:HttpClient) { }
 
   //GET Places Data Method
   getPlacesList():Observable<any[]>{

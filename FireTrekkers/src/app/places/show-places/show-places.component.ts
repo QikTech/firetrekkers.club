@@ -39,7 +39,6 @@ export class ShowPlacesComponent implements OnInit {
       PlaceDescription:"",
       PlaceCoverImage:"",
       PlaceImages:""
-
     }
     this.ModalTitle="Add Place";
     this.ActivateAddEditPlaceComp=true;

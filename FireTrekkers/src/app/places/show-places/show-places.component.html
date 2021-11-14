@@ -46,7 +46,7 @@ data-keyboard="false"
     <tbody>
         <tr *ngFor="let dataItem of PlacesList">
             <td>{{dataItem.PlaceId}}</td>
-            <td>{{dataItem.PlaceDate}}</td>
+            <td>{{dataItem.PlaceDate | date}}</td>
             <td>{{dataItem.PlaceName}}</td>
             <td>{{dataItem.PlaceArea}}</td>
             <td>{{dataItem.PlaceElevation}}</td>
